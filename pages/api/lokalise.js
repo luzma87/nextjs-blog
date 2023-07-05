@@ -11,10 +11,10 @@ export default async function handler(req, res) {
 
   if (Array.isArray(payload)) {
     if (payload[0] === "ping") {
-      res.status(200)
+      res.status(200).json({success: true})
       return
     } else {
-      res.status(400)
+      res.status(400).json({success: false})
       return
     }
   }
