@@ -25,7 +25,7 @@ export default async function handler(req, res) {
   const response = await lokaliseApi.files().download(payload.project.id,
     {
       format: 'json',
-      "original_filenames": true,
+      "original_filenames": false,
       "bundle_structure": 'src/literals/dictionaries/%LANG_ISO%.%FORMAT%',
       triggers: ["github"],
       "filter_repositories": ["pavulon10mg/lokalise-testing:main"]
