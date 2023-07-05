@@ -16,9 +16,11 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Intro]</p>
         <p>
-          (This is a sample website)
+          Pain, suffering, death I feel. Something terrible has happened. Young Skywalker is in pain. Terrible pain
+        </p>
+        <p>
+          Dis discere honestatis interpretaris vituperata posidonium ad definitionem. Signiferumque justo cum facilisi sumo signiferumque molestie signiferumque sapientem congue. Cubilia tractatos euismod perpetua ius equidem conceptam ante inceptos ocurreret. Posidonium dissentiunt mutat graece id antiopam perpetua salutatus tempus novum. Cetero invenire habitasse posidonium arcu erat regione. Nonumy dico mel laoreet contentiones regione.
         </p>
       </section>
 
