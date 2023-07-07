@@ -22,6 +22,17 @@ export default async function handler(req, res) {
   const apiKey = process.env.LOKALISE_API_KEY
   const lokaliseApi = new LokaliseApi({apiKey})
 
+  const projectId = req.headers["project-id"]
+  const event = req.headers["x-event"]
+  const webhookId = req.headers["webhook-id"]
+  const secret = req.headers["x-secret"]
+
+  const lokaliseSecret = process.env.LOKALISE_SECRET
+  if(lokaliseSecret !== secret){
+    res.status(403).json({success: false})
+    return
+  }
+
   const response = await lokaliseApi.files().download(payload.project.id,
     {
       format: 'json',
